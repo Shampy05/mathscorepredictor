@@ -4,6 +4,7 @@ import sys
 import numpy as np
 import pandas as pd
 import dill
+import pickle
 from sklearn.metrics import r2_score
 
 from sklearn.model_selection import GridSearchCV
@@ -58,5 +59,18 @@ def evaluate_models(models, x_train, y_train, x_test, y_test, params):
                 "r2_score": r2_score(y_test, y_pred),
             }
         return model_report
+    except Exception as e:
+        raise CustomException(e, sys)
+
+
+def load_obj(file_path):
+    """
+    This function is used to load the preprocessed data.
+    :param file_path: path to the preprocessed data
+    :return: preprocessed data
+    """
+    try:
+        with open(file_path, "rb") as f:
+            return pickle.load(f)
     except Exception as e:
         raise CustomException(e, sys)

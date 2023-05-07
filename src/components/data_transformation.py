@@ -16,7 +16,7 @@ from src.utils import save_obj
 
 @dataclass
 class DataTransformationConfig:
-    preprocess_data_path: str = os.path.join("artifacts", "preprocess_data.pkl")
+    preprocess_data_path: str = os.path.join("../../artifacts", "preprocess_data.pkl")
 
 class DataTransformation:
     def __init__(self):

@@ -24,7 +24,7 @@ class ModelTrainerConfig:
     """
     ModelTrainerConfig class is used to store the configuration of the model trainer.
     """
-    trained_model_path: str = os.path.join("artifacts", "model.pkl")
+    trained_model_path: str = os.path.join("../../artifacts", "model.pkl")
 
 
 class ModelTrainer:
