@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Welcome to the home page</title>
 </head>
-<body>
-    <h1>Welcome to the home page</h1>
-    <p>Click <a href="{{ url_for('predict')}}">here</a> to predict your exam performance</p>
+<body class="bg-gray-100">
+    <div class="w-full max-w-md mx-auto mt-10">
+        <h1 class="text-center text-3xl text-blue-800 mb-6">Welcome to the home page</h1>
+        <p class="text-center">Click <a class="text-blue-500 hover:underline" href="{{ url_for('predict')}}">here</a> to predict your exam performance</p>
+    </div>
 </body>
 </html>

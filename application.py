@@ -34,7 +34,7 @@ def predict():
 
         pipeline = PredictPipeline()
         prediction = pipeline.predict(data_frame)
-        return render_template('home.html', prediction=prediction[0])
+        return render_template('home.html', prediction=round(prediction[0], 2))
 
 
 if __name__ == '__main__':
